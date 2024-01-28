@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import ReactDom from 'react-dom'
+import App from "./App"
+import Person from "./Component/Person"
+import Button from "./Component/Button"
+import HeaderCompo from "./Component/Header"
+const root = ReactDom.createRoot(document.getElementById("root"))
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+root.render(
+ <>
+ <HeaderCompo title="welcome to the world of technology"/>
+<Person name="shriram tiwari" age="21"/>
+ <Button text="submit button" event ="onClick"/>
+ </>
+)

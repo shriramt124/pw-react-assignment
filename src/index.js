@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react"
+import ReactDom from 'react-dom'
+import App from "./App"
+import Person from "./Component/Person"
+import Button from "./Component/Button"
+import List from "./Component/List"
+import Header from "./Component/Header"
+const root = ReactDom.createRoot(document.getElementById("root"))
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ <>
+<Header title="this is the sample title"/>
+<Person name="shriram tiwari" age="21"/>{/* this is for person */}
+ <Button text="submit button" onClick={()=>{alert("i am clicked")}}/>{/* this is for button */}
+ <List items ={["banana","apple","mango"]}/>{/* this is for List items */}
+ 
+ </>
+)
